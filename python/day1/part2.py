@@ -4,7 +4,7 @@ def main():
     size = 3
     max_calories = [0]*size
 
-    file = open("input.txt", encoding="utf-8")
+    file = open("../../data/day1/input.txt", encoding="utf-8")
     #file = open("test.txt", encoding="utf-8")
 
     for line in file:
