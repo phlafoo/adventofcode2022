@@ -1,17 +1,12 @@
-use std::env;
+use day1::{part1, part2};
 
-mod part1;
-mod part2;
-/*
-file = open("../../data/day1/input.txt", encoding="utf-8")
-#file = open("test.txt", encoding="utf-8")
-*/
-fn main() {
-    let file = env::args();
+fn main(){
+    //let input = std::fs::read_to_string("../../data/day1/input.txt")?;
+    let input = include_str!("../../../data/day1/input.txt");
 
-    part1::run();
-}
+    let p1_answer = part1::run(input);
+    println!("part 1 answer = {p1_answer:#?}");
 
-fn parse(args: impl Iterator<item = String>) -> Option<String> {
-    
+    let p2_answer = part2::run_array(input);
+    println!("part 2 answer = {p2_answer:#?}");
 }
